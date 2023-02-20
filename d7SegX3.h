@@ -1,0 +1,20 @@
+#include <msp430.h>
+#include "stdint.h"
+
+
+#define D7SEG_DPORT P4OUT//PUERTO DE LOS SEGMENTOS
+#define D7SEG_DDIR  P4DIR//DIRECCIÓN DEL PUERTO DE LOS SEGMENTOS
+#define D7SEG_SUD   P3DIR//DIRECCIÓN DEL PUERTO DE LOS SELECTORES
+#define D7SEG_SUP   P3OUT
+#define D7SEG_SUB   BIT0// BIT SELECTOR DE UNIDADES
+#define D7SEG_SDD   P3DIR
+#define D7SEG_SDP   P3OUT
+#define D7SEG_SDB   BIT1 // BIT SELECTOR DE DECENAS
+#define D7SEG_SCD   P3DIR
+#define D7SEG_SCP   P3OUT
+#define D7SEG_SCB   BIT2//BIT SELECTOR DE CENTENAS
+
+void d7SegX3Init(void);
+void d7SegX3Print(uint16_t varIn);
+void d7SegX3Load(uint8_t varC,uint8_t varD,uint8_t varU);
+
